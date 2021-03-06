@@ -15,11 +15,16 @@ class Person:
         self.shopper_type = shopper_type
 
 # user creates account before questionnaire is presented
-# mock login system with username and password assumed correct
     def login(self, username, password):
+    """mock login system with username and password assumed correct"""
         correct = True
         while correct:
-            username - input()
+            self.username = input("Username:")
+            if password == self.password:
+                result = Hello " + self.name + ". Welcome to Carbon City!"
+            else:
+                result = "Password is incorrect."
+    return result
 
     def welcome(self):
         print("Hello " + self.name + ". Welcome to Carbon City.")
