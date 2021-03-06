@@ -5,7 +5,7 @@ where citizens strive each day to make more sustainable choices
 print("To help us calculate your carbon footprint, please answer the following questions:")
 
 class Person:
-    def __init__(self, name, username, password, location, diet, energy_consumption, shopper_type):
+    def __init__(self, name, username = '', password, location, diet, energy_consumption, shopper_type):
         self.name = name
         self.username = username
         self.password = password
@@ -17,22 +17,20 @@ class Person:
 # user creates account before questionnaire is presented
     def login(self, username, password):
     """mock login system with username and password assumed correct"""
-        correct = True
-        while correct:
-            if self.username == input("Username:"):
-                 result1 = True
-            else:
+        
+        if self.username !== input("Username:"):
                 result1 = False
-
-            if self.password == input("Password:"):
-                result2 = True
-            else:
-                    result2 = False
-            if result1 != result 2:
-                result = "Username or password is incorrect."
-            else:
-                result = Hello " + self.name + ". Welcome to Carbon City!"            
+            
+        if self.password != input("Password:"):
+            result2 = False
+              
+        if result1 or result 2 == False:
+            result = "Username or password is incorrect."
+        else:
+            result = Hello " + self.name + ". Welcome to Carbon City!"            
         return result
 
-    def welcome(self):
-        print("Hello " + self.name + ". Welcome to Carbon City.")
+    def questionnaire(self):
+        
+
+
