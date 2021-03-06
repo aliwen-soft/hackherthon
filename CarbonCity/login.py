@@ -19,12 +19,20 @@ class Person:
     """mock login system with username and password assumed correct"""
         correct = True
         while correct:
-            self.username = input("Username:")
-            if password == self.password:
-                result = Hello " + self.name + ". Welcome to Carbon City!"
+            if self.username == input("Username:"):
+                 result1 = True
             else:
-                result = "Password is incorrect."
-    return result
+                result1 = False
+
+            if self.password == input("Password:"):
+                result2 = True
+            else:
+                    result2 = False
+            if result1 != result 2:
+                result = "Username or password is incorrect."
+            else:
+                result = Hello " + self.name + ". Welcome to Carbon City!"            
+        return result
 
     def welcome(self):
         print("Hello " + self.name + ". Welcome to Carbon City.")
