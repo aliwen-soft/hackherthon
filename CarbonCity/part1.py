@@ -1,31 +1,35 @@
 # created class of type person so then can define people using 
-class Person:
-    def __init__(self, name, username, password, location):
-        self.name = name
-        self.username = username
-        self.password = password
-        self.location = location
+
+#class Person:
+    #'''a class that stores data for each user'''
+    #def __init__(self, name, username, password, location):
+        #'''set instance variables'''
+        #self.name = name
+        #self.username = username
+        #self.password = password
+        #self.location = location
         
 # register function, array of people
 
 # user creates account before questionnaire is presented
-def login(self, person):
+def login(name, username, password):
     #lower case p as getting attribute from the argument
     """mock login system with username and password assumed correct"""
-    if person.username != input("Username: "):
-            result1 = False
+    if username != input("Username: "):
+        result1 = "incorrect"
         
-    if person.password != input("Password: "):
-        result2 = False
+    if password != input("Password: "):
+        result2 = "incorrect"
             
-    if result1 or result2 == False:
+    if result1 or result2 == "incorrect":
         result = "Username or password is incorrect."
     else:
-        result = "Hello " + person.name + ". Welcome to Carbon City!"         
+        result = "Hello " + name + ". Welcome to Carbon City!"         
     return result
 
-def firstintro(self, person):
-    print("Hello " + person.name + """! Welcome to Carbon City, 
+def firstintro(name):
+    '''introduces new user to the app and takes them through the questionnaire'''
+    print("Hello " + name + """! Welcome to Carbon City, 
         where citizens strive each day to make more sustainable choices 
         and reduce their carbon footprint""")
     print("To help us calculate your carbon footprint, please answer the following questions:")
@@ -42,7 +46,6 @@ def firstintro(self, person):
         cf1 = 4
     else:
         cf1 = 3
-    answer1 = self.diet
     # Q2
     answer2 = input("""In a week, how much food do you spend from retaurants and takeaways? 
     \na. £0 \nb. £1 - £10 \nc. £10 - £50 \nd. More than £50 
@@ -55,20 +58,19 @@ def firstintro(self, person):
         cf2 = 7
     else:
         cf2 = 10
-    answer2 = self.shopper_type
-    return ((cf1 + cf2)/20)*100 %
+    carbonfp = ((cf1 + cf2)/20)*100
+    goal_cf = carbonfp * 0.25
+    return '''Thank you for completing the questionnaire. Your current carbon footprint is 
+    ''' + str(carbonfp) + "% and your target carbon footprint is " + str(goal_cf) +"%."
 
-def main():
+#def main():
 # dictates how things are run
-    person1 = Person("Dan", "Dan97", "Pass", "Happy", "Here", "Seafood". "High", "Holic")
-    login(person1)
-    print("Hello World!") 
-    firstintro()
+    #person1 = Person("Dan", "Dan97", "Pass", "London")
+    #login(person1)
+    ##firstintro()
 
 
 # says run main function if file name is main
 # not indented as you want it to always run
-if __name__ == "__main__": 
-    main()
-    
-
+#if __name__ == "__main__": 
+    #main()
