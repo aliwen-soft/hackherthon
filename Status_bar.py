@@ -38,4 +38,3 @@ def statusbar5():
         statusbar = statusbar + 5
     return statubar 
 
-# status bar edited
