@@ -21,7 +21,7 @@ def login(self, person):
     if result1 or result2 == False:
         result = "Username or password is incorrect."
     else:
-        result = Hello " + self.name + ". Welcome to Carbon City!"            
+        result = "Hello " + person.name + ". Welcome to Carbon City!"         
     return result
 
 def firstintro(self, person):
