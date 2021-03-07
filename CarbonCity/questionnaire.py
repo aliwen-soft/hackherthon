@@ -1,3 +1,5 @@
+# made an attempt at using classes
+
 # created class of type person so then can define people using 
 
 #class Person:
