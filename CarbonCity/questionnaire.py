@@ -17,13 +17,14 @@
 def login(name, username, password):
     #lower case p as getting attribute from the argument
     """mock login system with username and password assumed correct"""
+    result = "correct5555"
     if username != input("Username: "):
-        result1 = "incorrect"
-        
-    if password != input("Password: "):
-        result2 = "incorrect"
+        result = "incorrect"
             
-    if result1 or result2 == "incorrect":
+    if password != input("Password: "):
+        result = "incorrect"
+            
+    if result == "incorrect":
         result = "Username or password is incorrect."
     else:
         result = "Hello " + name + ". Welcome to Carbon City!"         
@@ -31,11 +32,7 @@ def login(name, username, password):
 
 def firstintro(name):
     '''introduces new user to the app and takes them through the questionnaire'''
-    print("Hello " + name + """! Welcome to Carbon City, 
-        where citizens strive each day to make more sustainable choices 
-        and reduce their carbon footprint""")
-    print("To help us calculate your carbon footprint, please answer the following questions:")
-
+    print("Hello " + name + "! Welcome to Carbon City, where citizens strive each day to make more sustainable choices and reduce their carbon footprint \n To help us calculate your carbon footprint, please answer the following questions:")
     # Q1
     answer1 = input("""How would you best describe your diet? 
     \na. Meat in every meal \nb. Meat in most meals \nc. Vegeterian \nd. Vegan 
@@ -68,8 +65,10 @@ def firstintro(name):
 #def main():
 # dictates how things are run
     #person1 = Person("Dan", "Dan97", "Pass", "London")
-    #login(person1)
-    ##firstintro()
+
+login("Chinene", "Cece", "Pass")
+x = firstintro("Chinene")
+print(x)
 
 
 # says run main function if file name is main
